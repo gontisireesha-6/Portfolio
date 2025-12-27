@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gonti Sireesha | Portfolio</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(120deg, #f0f4ff, #ffffff);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px rgba(98,0,234,0.4); }
+    50% { box-shadow: 0 0 20px rgba(98,0,234,0.7); }
+    100% { box-shadow: 0 0 10px rgba(98,0,234,0.4); }
+}
+
+/* ---------- HEADER ---------- */
+header {
+    height: 100vh;
+    background: linear-gradient(135deg, #6200ea, #03dac5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+    animation: fadeUp 1s ease forwards;
+}
+
+header p {
+    margin-top: 15px;
+    font-size: 20px;
+    opacity: 0.9;
+    animation: fadeUp 1.5s ease forwards;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 16px;
+    animation: fadeUp 1s ease forwards;
+}
+
+/* ---------- TITLES ---------- */
+section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #6200ea;
+    position: relative;
+}
+
+section h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #03dac5;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+/* ---------- ABOUT ---------- */
+.about p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* ---------- TAGS ---------- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tag {
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #6200ea, #03dac5);
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+}
+
+/* ---------- PROJECT CARD ---------- */
+.project-card {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    background: #f9f9ff;
+    border-left: 6px solid #6200ea;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ---------- BUTTON ---------- */
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    background: #6200ea;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    animation: glow 2s infinite;
+}
+
+/* ---------- EDUCATION ---------- */
+.timeline li {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #6200ea;
+    color: white;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 36px;
+    }
+
+    section {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+    <div>
+        <h1>Gonti Sireesha</h1>
+        <p>MCA Student • Aspiring Web Developer</p>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I am Gonti Sireesha, currently pursuing a Master of Computer Applications (MCA).
+        I have a strong academic foundation in Mathematics, Statistics, and Computer Science.
+        I enjoy building visually appealing and interactive web applications and constantly
+        strive to enhance my technical and problem-solving skills.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+    <div class="tags">
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">JavaScript (Basics)</div>
+    </div>
+</section>
+
+<!-- INTERESTS -->
+<section>
+    <h2>Interests</h2>
+    <div class="tags">
+        <div class="tag">Web Development</div>
+        <div class="tag">UI Design</div>
+        <div class="tag">Learning New Technologies</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h2>Projects</h2>
+    <div class="project-card">
+        <h3>Interactive Recipe Card</h3>
+        <p>
+            Created an interactive recipe card using HTML, CSS, and JavaScript with
+            animations, transitions, progress indicators, and responsive design to
+            enhance user experience.
+        </p>
+        <a class="button" href="PizzaCard.html">View Project</a>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+    <h2>Education</h2>
+    <ul class="timeline">
+        <li><strong>10th:</strong> Holy Mary High School</li>
+        <li><strong>Intermediate [MEC]:</strong> Gayathri Junior College </li>
+        <li><strong>B.Sc [MSCs]:</strong> Sindhu Degree College</li>
+        <li><strong>MCA:</strong> Veeranari Chakali Ilamma Women's University (Koti Women's College)</li>
+    </ul>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> gontisireesha@gmail.com</p>
+</section>
+
+<footer>
+    © 2025 Gonti Sireesha | Aspiring Web Developer 
+</footer>
+
+</body>
+</html>
